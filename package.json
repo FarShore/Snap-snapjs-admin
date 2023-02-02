@@ -1,57 +1,37 @@
 {
-  "name": "@snapmobile/snapjs-admin",
-  "version": "0.3.18",
-  "description": "SnapJS Admin",
-  "main": "./dist/index.umd.js",
-  "module": "./dist/index.js",
-  "typings": "./dist/index.d.ts",
-  "license": "MIT",
-  "keywords": [
-    "angular",
-    "angular4",
-    "aot",
-    "aot-compatible",
-    "aot-compilation",
-    "library",
-    "ng",
-    "seed",
-    "starter",
-    "tick-tock",
-    "typescript"
+  "_from": "@snapmobile/snapjs-admin@latest",
+  "_id": "@snapmobile/snapjs-admin@0.3.18",
+  "_inBundle": false,
+  "_integrity": "sha512-EXEusxsmu4OgBiKTegUxnj1aG3OxlrHozXKj17hwDqoR+y+cA4gTjVNIxv5WKIFzvkWq1XJI1TdTBEv46qe8bQ==",
+  "_location": "/@snapmobile/snapjs-admin",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@snapmobile/snapjs-admin@latest",
+    "name": "@snapmobile/snapjs-admin",
+    "escapedName": "@snapmobile%2fsnapjs-admin",
+    "scope": "@snapmobile",
+    "rawSpec": "latest",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
   ],
+  "_resolved": "https://registry.npmjs.org/@snapmobile/snapjs-admin/-/snapjs-admin-0.3.18.tgz",
+  "_shasum": "84171f04e8b532d90a8ef48a1b9b70889bcdaec6",
+  "_spec": "@snapmobile/snapjs-admin@latest",
+  "_where": "/home/fe12202/mani/workspace/FlavorsOfHilton-Web",
   "author": {
     "name": "Brandon Passley",
     "url": "https://www.linkedin.com/in/brandonpassley/"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/SnapMobileIO/SnapJS-Admin"
+  "bugs": {
+    "url": "https://github.com/SnapMobileIO/SnapJS-Admin/issues"
   },
-  "scripts": {
-    "build": "npm run build:esm && npm run build:umd",
-    "build:esm": "gulp inline-templates && npm run ngcompile",
-    "build:esm:watch": "gulp build:esm:watch",
-    "build:umd": "webpack --config webpack-umd.config.ts",
-    "build:umd:watch": "npm run build:umd -- --watch",
-    "build:watch": "concurrently --raw \"npm run build:umd:watch\" \"npm run build:esm:watch\"",
-    "ci": "npm run lint && npm run test && npm run build && npm run docs",
-    "clean:all": "npm run clean:tmp && rimraf node_modules",
-    "clean:tmp": "rimraf coverage dist tmp docs",
-    "codecov": "cat coverage/lcov.info | codecov",
-    "docs": "compodoc -p tsconfig.json -d docs --disableCoverage --disablePrivateOrInternalSupport",
-    "explorer": "source-map-explorer ./dist/index.umd.js",
-    "gh-pages": "rimraf docs && npm run docs && gh-pages -d docs",
-    "lint": "npm run tslint 'src/**/*.ts'",
-    "ngcompile": "node_modules/.bin/ngc -p tsconfig-aot.json",
-    "postversion": "git push && git push --tags",
-    "prebuild": "rimraf dist tmp",
-    "prebuild:watch": "rimraf dist tmp",
-    "prepublishOnly": "npm run ci",
-    "preversion": "npm run ci",
-    "test": "karma start",
-    "test:watch": "karma start --auto-watch --no-single-run",
-    "tslint": "tslint"
-  },
+  "bundleDependencies": false,
   "dependencies": {
     "@angular/animations": "^4.3.6",
     "@angular/forms": "^4.1.1",
@@ -67,10 +47,8 @@
     "ng2-toastr": "^4.0.1",
     "ngx-chips": "^1.5.3"
   },
-  "peerDependencies": {
-    "@angular/common": "^4.0.0",
-    "@angular/core": "^4.0.0"
-  },
+  "deprecated": false,
+  "description": "SnapJS Admin",
   "devDependencies": {
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
@@ -120,5 +98,57 @@
     "webpack-angular-externals": "^1.0.2",
     "webpack-rxjs-externals": "^1.0.0",
     "zone.js": "^0.8.10"
-  }
+  },
+  "homepage": "https://github.com/SnapMobileIO/SnapJS-Admin#readme",
+  "keywords": [
+    "angular",
+    "angular4",
+    "aot",
+    "aot-compatible",
+    "aot-compilation",
+    "library",
+    "ng",
+    "seed",
+    "starter",
+    "tick-tock",
+    "typescript"
+  ],
+  "license": "MIT",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.js",
+  "name": "@snapmobile/snapjs-admin",
+  "peerDependencies": {
+    "@angular/common": "^4.0.0",
+    "@angular/core": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SnapMobileIO/SnapJS-Admin.git"
+  },
+  "scripts": {
+    "build": "npm run build:esm && npm run build:umd",
+    "build:esm": "gulp inline-templates && npm run ngcompile",
+    "build:esm:watch": "gulp build:esm:watch",
+    "build:umd": "webpack --config webpack-umd.config.ts",
+    "build:umd:watch": "npm run build:umd -- --watch",
+    "build:watch": "concurrently --raw \"npm run build:umd:watch\" \"npm run build:esm:watch\"",
+    "ci": "npm run lint && npm run test && npm run build && npm run docs",
+    "clean:all": "npm run clean:tmp && rimraf node_modules",
+    "clean:tmp": "rimraf coverage dist tmp docs",
+    "codecov": "cat coverage/lcov.info | codecov",
+    "docs": "compodoc -p tsconfig.json -d docs --disableCoverage --disablePrivateOrInternalSupport",
+    "explorer": "source-map-explorer ./dist/index.umd.js",
+    "gh-pages": "rimraf docs && npm run docs && gh-pages -d docs",
+    "lint": "npm run tslint 'src/**/*.ts'",
+    "ngcompile": "ngc -p tsconfig-aot.json",
+    "postversion": "git push && git push --tags",
+    "prebuild": "rimraf dist tmp",
+    "prebuild:watch": "rimraf dist tmp",
+    "preversion": "npm run ci",
+    "test": "karma start",
+    "test:watch": "karma start --auto-watch --no-single-run",
+    "tslint": "tslint"
+  },
+  "typings": "./dist/index.d.ts",
+  "version": "0.3.18"
 }
