@@ -7,6 +7,8 @@ var FormcontrolInputComponent = (function () {
     }
     FormcontrolInputComponent.prototype.updateFormValue = function (formControlValue) {
         if (this.inputType === 'checkbox') {
+            console.log("@snap---package");
+            console.log(formControlValue.checked);
             // formControlValue = !formControlValue;
             this.form.patchValue((_a = {},
                     _a[this.field] = formControlValue.checked === true ? 'on' : 'off',
@@ -18,6 +20,8 @@ var FormcontrolInputComponent = (function () {
 
     FormcontrolInputComponent.prototype.isChecked = function (formValue) {
             var isChk = false;
+            console.log("@snap---isChecked")
+            console.log(formValue);
             if(formValue === 'on'){
                 isChk = true;
             } else if( formValue === 'off') {
